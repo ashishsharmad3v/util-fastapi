@@ -158,5 +158,5 @@ async def configure_restart(interval_hours: int):
 
 if __name__ == "__main__":
     # When running this file directly, start the Uvicorn server
-    logger.info(f"Starting FastAPI application with auto-restart every {restart_interval_hours} hours")
+    logger.info(f"Starting FastAPI application with auto-restart configured to restart at 11:30 PM BST daily")
     uvicorn.run("restart-1:app", host="0.0.0.0", port=8000, reload=False)
